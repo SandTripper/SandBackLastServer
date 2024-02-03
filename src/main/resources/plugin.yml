@@ -1,0 +1,12 @@
+name: SandBackLastServer
+version: '${project.version}'
+softdepend: [ 'AuthMe' ]
+main: cn.sandtripper.minecraft.sandbacklastserver.SandBackLastServer
+api-version:
+authors: [ '沙酱紫漏' ]
+description: SandBackLastServer
+commands:
+  SandBackLastServer:
+    description: '使用/sbls help查看插件帮助'
+    usage: /sbls help
+    aliases: [ sbls ]

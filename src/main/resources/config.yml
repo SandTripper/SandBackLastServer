@@ -1,0 +1,34 @@
+# 服务器id,需要和 bungee 配置相同
+server-name: server
+
+# 如果没有最后游玩的服务器，需要发送的服务器
+default-server: ""
+
+# 是否是大厅，如果是，发送指令才可用，如果不是，才会记录玩家到达该服务器的信息
+is-lobby: false
+
+# 是否登陆后自动传送，现在只支持AuthMe
+is-send-when-login: false
+
+# 发送同个玩家的冷却，由于发送玩家需要查询数据库，建议设置冷却以防数据库压力过大
+# 设置为 3 代表处理某个玩家发送后 3 秒内都不会再处理该玩家的发送
+send-cool-down: 3
+
+countdown-config:
+  # 发送倒计时，单位：秒
+  countdown: 60
+  # 倒计时提示，可选：BOSSBAR, CHAT，ACTIONBAR, TITLE
+  reminder-type: ACTIONBAR
+  # 倒计时消息内容，使用TIME代表剩余秒数
+  message: '&e{TIME}秒后将传送到最后游玩的子服，输入/sbls cancel取消'
+
+# 发送玩家时显示的消息类型，可选：BOSSBAR, CHAT，ACTIONBAR, TITLE
+send-reminder-type: TITLE
+# 查询玩家子服时显示的消息
+send-message: "&e&l正在查询最后游玩的子服，请耐心等待"
+# 发送玩家成功时显示的消息
+success-message: "&d&l已传送至最后游玩的子服！"
+
+#请勿修改
+version: 1
+
